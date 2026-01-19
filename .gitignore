@@ -1,0 +1,35 @@
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+*.nav
+*.snm
+*.vrb
+*.idx
+*.ilg
+*.ind
+*.glo
+*.gls
+*.glg
+*.xdv
+
+# Build directories
+_minted-*/
+auto/
+
+# Keep cv.pdf
+!cv.pdf
+
+# Private info
+secrets.tex

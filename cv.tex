@@ -1,0 +1,68 @@
+\documentclass[a4paper,10pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lato}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{parskip}
+\usepackage{tabularx}
+\usepackage{multicol}
+
+% Colors
+\definecolor{primary}{RGB}{45, 62, 80}
+\definecolor{accent}{RGB}{52, 152, 219}
+\definecolor{lightgray}{RGB}{245, 245, 245}
+\definecolor{darkgray}{RGB}{100, 100, 100}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    urlcolor=accent,
+    pdftitle={Martijn Scholten - CV},
+    pdfauthor={Martijn Scholten}
+}
+
+% Custom commands
+\newcommand{\cvsection}[1]{%
+    \vspace{0.5cm}
+    {\Large\bfseries\color{primary}#1}
+    \vspace{0.2cm}
+    \hrule height 0.5pt
+    \vspace{0.3cm}
+}
+
+\newcommand{\cventry}[4]{%
+    {\textbf{#1}} \hfill {\small\color{darkgray}#2}\\
+    {\color{accent}#3} \hfill {\small\color{darkgray}#4}
+    \vspace{0.1cm}
+}
+
+\newcommand{\skilltag}[1]{%
+    \tikz[baseline=(char.base)]{
+        \node[fill=lightgray, rounded corners=3pt, inner sep=5pt, text=primary] (char) {\small#1};
+    }\hspace{0.1cm}
+}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Private info (gitignored)
+\input{secrets}
+
+\begin{document}
+
+\input{sections/header}
+\input{sections/profile}
+\input{sections/skills}
+\input{sections/experience}
+\input{sections/education}
+\input{sections/projects}
+
+\end{document}
