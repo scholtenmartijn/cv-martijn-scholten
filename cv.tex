@@ -4,7 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lato}
-\usepackage[margin=1.2cm]{geometry}
+\usepackage[margin=1.0cm]{geometry}
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{enumitem}
@@ -31,17 +31,17 @@
 
 % Custom commands
 \newcommand{\cvsection}[1]{%
-    \vspace{0.4cm}
-    {\Large\bfseries\color{primary}#1}
-    \vspace{0.15cm}
-    \hrule height 0.5pt
     \vspace{0.25cm}
+    {\Large\bfseries\color{primary}#1}
+    \vspace{0.1cm}
+    \hrule height 0.5pt
+    \vspace{0.15cm}
 }
 
 \newcommand{\cventry}[4]{%
     {\textbf{#1}} \hfill {\small\color{darkgray}#2}\\
     {\color{accent}#3} \hfill {\small\color{darkgray}#4}
-    \vspace{0.1cm}
+    \vspace{0.05cm}
 }
 
 \newcommand{\skilltag}[1]{%
